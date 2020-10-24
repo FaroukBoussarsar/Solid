@@ -11,7 +11,9 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/a', (req, res) => {
-    return app.render(req, res, '/a', req.query)
+    return res.json({
+      hello:'hello'
+    })
   })
 
   server.get('/b', (req, res) => {
