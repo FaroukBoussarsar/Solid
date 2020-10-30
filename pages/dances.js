@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Layout from "../components/Layout"
 
-const KEY = 'AIzaSyBsvCro8KztEAhFlbnDW7lxXbSjkt9nc_8'
+const KEY = 'AIzaSyAA4OSSHctriuEfOqJcFgW-IEnf_XL7r5E'
 const Dance = (props) => {
     return (
         <Layout>
@@ -28,7 +28,7 @@ const Dance = (props) => {
 Dance.getInitialProps = async function () {
     const res = await fetch('https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCIabPXjvT5BVTxRDPCBBOOQ&key=' + KEY + '');
     const data = await res.json();
-    const res1 = await fetch('https://www.googleapis.com/youtube/v3/playlistItems?key=' + KEY + '&playlistId=' + data.items[0].contentDetails.relatedPlaylists.uploads + '&maxResults=5&part=snippet');
+    const res1 = await fetch('https://www.googleapis.com/youtube/v3/playlistItems?key=' + KEY + '&playlistId=' + data.items[0].contentDetails.relatedPlaylists.uploads + '&maxResults=50&part=snippet');
     const data1 = await res1.json();
     return {
         items: data1

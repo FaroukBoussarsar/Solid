@@ -10,6 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "framer-motion": "^2.9.4",
+    "mongoose": "5.1.7",
     "next": "9.5.5",
     "react": "16.14.0",
     "react-dom": "16.14.0",
